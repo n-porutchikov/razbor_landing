@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <style>
         /* ============================================================
-           БАЗА — СВЕТЛАЯ ТЕМА
+           БАЗА
         ============================================================ */
         * {
             margin: 0;
@@ -50,61 +50,6 @@
         }
 
         /* ============================================================
-           КНОПКИ
-        ============================================================ */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 56px;
-            padding: 16px 40px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 0.85rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            text-decoration: none;
-            cursor: pointer;
-            transition: 0.3s ease;
-            border: none;
-            border-radius: 2px;
-        }
-
-        .btn-primary {
-            background: #b8956a;
-            color: #fff;
-        }
-        .btn-primary:hover {
-            background: #a8845c;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 28px rgba(184, 149, 106, 0.25);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: #b8956a;
-            border: 1px solid #b8956a;
-        }
-        .btn-outline:hover {
-            background: #b8956a;
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 28px rgba(184, 149, 106, 0.15);
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .btn-group .btn {
-            flex: 1;
-            min-width: 200px;
-            max-width: 300px;
-        }
-
-        /* ============================================================
            СЕКЦИИ
         ============================================================ */
         .section {
@@ -120,14 +65,6 @@
             margin-bottom: 44px;
             font-weight: 400;
             letter-spacing: 0.04em;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #7a6a5e;
-            font-size: 1.05rem;
-            max-width: 620px;
-            margin: -28px auto 40px;
         }
 
         /* ============================================================
@@ -212,196 +149,15 @@
         }
 
         /* ============================================================
-           КАРТОЧКИ
-        ============================================================ */
-        .about-grid,
-        .result-grid,
-        .format-grid,
-        .speakers-grid,
-        .reviews-grid {
-            display: grid;
-            gap: 24px;
-        }
-
-        .about-grid { grid-template-columns: repeat(3, 1fr); }
-        .result-grid { grid-template-columns: repeat(3, 1fr); }
-        .format-grid { grid-template-columns: repeat(4, 1fr); }
-        .speakers-grid {
-            grid-template-columns: repeat(2, 1fr);
-            max-width: 720px;
-            margin: 0 auto;
-        }
-        .reviews-grid { grid-template-columns: repeat(2, 1fr); }
-
-        .about-item,
-        .result-card,
-        .format-item,
-        .speaker-card,
-        .review-card,
-        .module {
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(184, 149, 106, 0.06);
-            transition: 0.3s ease;
-        }
-
-        .about-item:hover,
-        .result-card:hover,
-        .format-item:hover,
-        .speaker-card:hover,
-        .review-card:hover {
-            box-shadow: 0 8px 40px rgba(184, 149, 106, 0.12);
-            transform: translateY(-4px);
-        }
-
-        .about-item {
-            padding: 32px 28px;
-            position: relative;
-            border-left: 3px solid #b8956a;
-        }
-
-        .about-item .theatre-mark {
-            display: inline-block;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: #b8956a;
-            opacity: 0.3;
-            margin-bottom: 8px;
-            line-height: 1;
-        }
-
-        .about-item h3 {
-            font-size: 1.6rem;
-            color: #000000;
-            margin-bottom: 10px;
-            font-weight: 400;
-        }
-
-        .about-item p {
-            color: #6a5a4e;
-            font-size: 0.95rem;
-        }
-
-        .about-item:last-child h3 {
-            font-size: 1.4rem;
-            line-height: 1.2;
-        }
-
-        .result-card {
-            padding: 32px 28px;
-        }
-        .result-card .num {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.4rem;
-            color: #b8956a;
-            opacity: 0.3;
-            line-height: 1;
-            margin-bottom: 6px;
-        }
-        .result-card h3 {
-            font-size: 1.5rem;
-            color: #000000;
-            margin-bottom: 8px;
-            font-weight: 400;
-        }
-        .result-card p {
-            color: #6a5a4e;
-            font-size: 0.95rem;
-        }
-
-        .format-item {
-            text-align: center;
-            padding: 28px 16px;
-        }
-        .format-item i {
-            font-size: 1.6rem;
-            color: #b8956a;
-            margin-bottom: 8px;
-            display: block;
-        }
-        .format-item .value {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            color: #000000;
-        }
-        .format-item .label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #8a7a6e;
-        }
-        .format-item .note {
-            font-size: 0.7rem;
-            color: #aa9a8e;
-            margin-top: 4px;
-        }
-
-        .speaker-card {
-            overflow: hidden;
-        }
-        .speaker-photo {
-            height: 280px;
-            overflow: hidden;
-            background: #f0e8e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .speaker-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            filter: grayscale(0.15);
-        }
-        .speaker-card h3 {
-            font-size: 1.6rem;
-            padding: 20px 24px 2px;
-            color: #000000;
-            font-weight: 400;
-        }
-        .speaker-card .role {
-            padding: 0 24px 24px;
-            color: #b8956a;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .review-card {
-            padding: 28px 24px;
-        }
-        .review-avatar {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 14px;
-        }
-        .review-avatar img {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #f0e8e0;
-        }
-        .review-content .name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.15rem;
-            color: #000000;
-        }
-        .review-content .text {
-            font-style: italic;
-            line-height: 1.7;
-            color: #6a5a4e;
-        }
-
-        /* ============================================================
            ПРОГРАММА (АККОРДЕОН)
         ============================================================ */
         .module {
             margin-bottom: 12px;
             overflow: hidden;
             border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(184, 149, 106, 0.06);
+            transition: 0.3s ease;
         }
 
         .module-header {
@@ -472,244 +228,15 @@
         }
 
         /* ============================================================
-           FAQ
-        ============================================================ */
-        .faq-item {
-            margin-bottom: 10px;
-            border-radius: 12px;
-            background: #ffffff;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
-            overflow: hidden;
-        }
-        .faq-question {
-            padding: 20px 26px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            color: #000000;
-            font-weight: 500;
-            font-size: 1.05rem;
-            transition: 0.2s ease;
-            background: #f8f2ec;
-        }
-        .faq-question:hover {
-            background: #f2eae2;
-        }
-        .faq-question i {
-            color: #b8956a;
-            transition: 0.3s;
-        }
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-        .faq-answer {
-            display: none;
-            padding: 0 26px 24px;
-            color: #5a4a3e;
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-
-        /* ============================================================
-           ЦИТАТА
-        ============================================================ */
-        .quote-block {
-            text-align: center;
-            padding: 30px 0;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .quote-block i {
-            color: #b8956a;
-            opacity: 0.25;
-            font-size: 1.2rem;
-        }
-        .quote-block p {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: #000000;
-            font-style: italic;
-        }
-        .quote-block .author {
-            color: #8a7a6e;
-            font-size: 0.9rem;
-            font-style: normal;
-        }
-
-        /* ============================================================
-           ФОРМА
-        ============================================================ */
-        .form-section {
-            background: #f5ede6;
-            border-radius: 24px;
-            padding: 56px 40px;
-            text-align: center;
-            border: 1px solid rgba(184, 149, 106, 0.12);
-        }
-        .form-section h2 {
-            margin-bottom: 8px;
-            color: #000000;
-        }
-        .form-section .sub {
-            color: #6a5a4e;
-            font-size: 1.05rem;
-            max-width: 480px;
-            margin: 0 auto 28px;
-        }
-        .form-group {
-            max-width: 480px;
-            margin: 0 auto 14px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 16px 20px;
-            background: #ffffff;
-            border: 1px solid #e8ddd2;
-            color: #2a1f1a;
-            font-size: 1rem;
-            font-family: 'Inter', sans-serif;
-            border-radius: 8px;
-            transition: 0.3s;
-            outline: none;
-        }
-        .form-group input:focus {
-            border-color: #b8956a;
-            box-shadow: 0 0 0 3px rgba(184, 149, 106, 0.08);
-        }
-        .form-group input::placeholder {
-            color: #aa9a8e;
-        }
-        .form-section .btn {
-            width: 100%;
-            max-width: 480px;
-            border-radius: 8px;
-            margin-top: 4px;
-        }
-
-        #successMessage {
-            display: none;
-            margin-top: 20px;
-            padding: 14px;
-            color: #b8956a;
-            border: 1px solid rgba(184, 149, 106, 0.15);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.5);
-        }
-
-        /* ============================================================
-           КОНТАКТЫ
-        ============================================================ */
-        .contact-block {
-            display: flex;
-            justify-content: center;
-            gap: 30px 50px;
-            flex-wrap: wrap;
-            margin-top: 28px;
-            padding-top: 28px;
-            border-top: 1px solid rgba(184, 149, 106, 0.12);
-        }
-        .contact-item {
-            color: #5a4a3e;
-            font-size: 0.95rem;
-        }
-        .contact-item i {
-            color: #b8956a;
-            margin-right: 8px;
-            width: 20px;
-            text-align: center;
-        }
-        .contact-item a {
-            color: #b8956a;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: 0.2s;
-        }
-        .contact-item a:hover {
-            border-bottom-color: #b8956a;
-        }
-
-        /* ============================================================
-           ФУТЕР
-        ============================================================ */
-        .footer {
-            padding: 40px 0;
-            background: #f5ede6;
-            text-align: center;
-            border-top: 1px solid rgba(184, 149, 106, 0.1);
-        }
-        .footer .socials {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 16px;
-        }
-        .footer .socials a {
-            color: #b8956a;
-            font-size: 1.2rem;
-            transition: 0.3s;
-            opacity: 0.6;
-        }
-        .footer .socials a:hover {
-            opacity: 1;
-        }
-        .footer .socials .max-link {
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            font-size: 0.85rem;
-            opacity: 0.6;
-        }
-        .footer .socials .max-link:hover {
-            opacity: 1;
-        }
-        .footer p {
-            color: #8a7a6e;
-            font-size: 0.8rem;
-        }
-
-        /* ============================================================
            АДАПТИВ
         ============================================================ */
         @media (max-width: 900px) {
-            .about-grid,
-            .result-grid,
-            .format-grid,
-            .speakers-grid,
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .format-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .speakers-grid {
-                max-width: 400px;
-            }
-
             .hero h1 {
                 font-size: clamp(4rem, 15vw, 6rem);
             }
 
             .section {
                 padding: 56px 0;
-            }
-
-            .form-section {
-                padding: 36px 20px;
-            }
-
-            .contact-block {
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
-            }
-
-            .about-item:last-child h3 {
-                font-size: 1.4rem;
             }
         }
 
@@ -724,14 +251,6 @@
             .hero .subtitle {
                 font-size: 0.95rem;
             }
-            .btn-group {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .btn-group .btn {
-                max-width: 100%;
-                width: 100%;
-            }
             .section h2 {
                 font-size: 1.8rem;
             }
@@ -744,19 +263,6 @@
             .module-body {
                 padding: 0 18px 18px;
             }
-            .about-item,
-            .result-card {
-                padding: 24px 20px;
-            }
-            .review-card {
-                padding: 20px 16px;
-            }
-            .speaker-photo {
-                height: 220px;
-            }
-            .about-item:last-child h3 {
-                font-size: 1.2rem;
-            }
         }
     </style>
 </head>
@@ -765,65 +271,14 @@
     <!-- ===== HERO ===== -->
     <section class="hero">
         <div class="container">
-            <div class="badge">Авторский курс • Старт 4 октября</div>
+            <div class="badge">Авторский курс Алины Порутчиковой</div>
             <h1>Территория искусства</h1>
             <div class="decor-line"></div>
             <p class="subtitle">
                 Говорим про театр, литературу и кино!<br>
                 Учимся анализировать и разбирать спектакли, пьесы и фильмы!
             </p>
-            <div class="btn-group">
-                <a href="#form" class="btn btn-primary">Записаться на курс</a>
-                <a href="#program" class="btn btn-outline">Программа курса</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ДЛЯ КОГО ЭТОТ КУРС ===== -->
-    <section class="section">
-        <div class="container">
-            <h2>Для кого этот курс</h2>
-            <div class="about-grid">
-                <div class="about-item">
-                    <span class="theatre-mark">01</span>
-                    <h3>Новичкам</h3>
-                    <p>Тем, кто только начинает погружаться в театр и хочет получить базу для глубокого понимания.</p>
-                </div>
-                <div class="about-item">
-                    <span class="theatre-mark">02</span>
-                    <h3>Театралам</h3>
-                    <p>Тем, кто уже любит театр, но хочет разбираться в нём глубже и структурировать знания.</p>
-                </div>
-                <div class="about-item">
-                    <span class="theatre-mark">03</span>
-                    <h3 style="font-size:1.4rem; line-height:1.2;">Для тех, кто хочет стать частью театрального сообщества</h3>
-                    <p>Найти единомышленников, обсуждать спектакли и погружаться в театральную среду вместе.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ЧТО ВЫ ПОЛУЧИТЕ ===== -->
-    <section class="section" style="background: #fbf8f4;">
-        <div class="container">
-            <h2>Что вы получите</h2>
-            <div class="result-grid">
-                <div class="result-card">
-                    <div class="num">01</div>
-                    <h3>Действенный анализ</h3>
-                    <p>Освоите метод действенного анализа для глубокого понимания спектаклей и пьес.</p>
-                </div>
-                <div class="result-card">
-                    <div class="num">02</div>
-                    <h3>Режиссёрские подходы</h3>
-                    <p>Разберёте работы ведущих режиссёров — от Станиславского до современников.</p>
-                </div>
-                <div class="result-card">
-                    <div class="num">03</div>
-                    <h3>Критический взгляд</h3>
-                    <p>Научитесь различать качественные и посредственные постановки, сформируете вкус.</p>
-                </div>
-            </div>
+            <!-- Кнопка «Программа курса» удалена -->
         </div>
     </section>
 
@@ -862,16 +317,12 @@
                 </div>
                 <div class="module-body">
                     <div class="lesson">
-                        <div class="title">Занятие 4. Питер Брук</div>
-                        <div class="desc"><i>—</i> Становление Питера Брука. Основа понятия «пустое пространство». Как Брук изменил театр. Разбор спектакля: У. Шекспир «Король Лир» с Полом Скофилдом.</div>
+                        <div class="title">Занятие 4. Питер Брук + Ежи Гротовский</div>
+                        <div class="desc"><i>—</i> Становление Питера Брука. Основа понятия «пустое пространство». Как Брук изменил театр. Что нового Гротовский предложил театру? Система «бедного театра». Основы психофизического тренинга.</div>
                     </div>
                     <div class="lesson">
-                        <div class="title">Занятие 5. Ежи Гротовский + Бертольт Брехт</div>
-                        <div class="desc"><i>—</i> Что нового Гротовский предложил театру? Система «бедного театра». Основы психофизического тренинга. Становление Бертольда Брехта. Основы «эпического театра» и понятие «эффекта отчуждения». Зачем Брехту нужно было менять театральную систему? Разбор пьесы: «Трёхгрошовая опера».</div>
-                    </div>
-                    <div class="lesson">
-                        <div class="title">Занятие 6. Театр абсурда (Ионеско, Беккет, Мрожек)</div>
-                        <div class="desc"><i>—</i> Кто такие абсурдисты? Зачем они писали свои тексты? Как часто комедия абсурда идёт в театре? Зачем зрителю смотреть на то, что лишено смысла? Разбор пьесы: С. Беккет «В ожидании Годо».</div>
+                        <div class="title">Занятие 5. Бертольт Брехт</div>
+                        <div class="desc"><i>—</i> Становление Бертольта Брехта. Основы «эпического театра» и понятие «эффекта отчуждения». Зачем Брехту нужно было менять театральную систему? Разбор пьесы: «Трёхгрошовая опера».</div>
                     </div>
                 </div>
             </div>
@@ -884,12 +335,20 @@
                 </div>
                 <div class="module-body">
                     <div class="lesson">
-                        <div class="title">Занятие 7. Георгий Товстоногов</div>
+                        <div class="title">Занятие 6. Георгий Товстоногов</div>
                         <div class="desc"><i>—</i> История становления режиссёра. БДТ. Методы работы с текстом и артистами. Метод действенного анализа. Разбор спектакля: «Холстомер».</div>
                     </div>
                     <div class="lesson">
-                        <div class="title">Занятие 8. Анатолий Эфрос</div>
-                        <div class="desc"><i>—</i> История становления режиссёра и его путь. Как режиссёру удавалось ставить спектакли о свободе, говоря на языке тончайшего психологизма в условиях жесткой цензуры? Работа с актёрами. Разбор спектакля: «Ромео и Джульетта».</div>
+                        <div class="title">Занятие 7. Анатолий Эфрос</div>
+                        <div class="desc"><i>—</i> История становления режиссёра и его путь. Как режиссёру удавалось ставить спектакли о свободе, говоря на языке тончайшего психологизма в условиях жёсткой цензуры? Работа с актёрами. Разбор спектакля: «Ромео и Джульетта».</div>
+                    </div>
+                    <div class="lesson">
+                        <div class="title">Занятие 8. Лев Додин</div>
+                        <div class="desc"><i>—</i> Хранитель традиций Станиславского в XXI веке. Становление режиссёра и его путь. МДТ. Его методы и приёмы в работе с артистами. Разбор спектакля: «Дядя Ваня» или «Бесы».</div>
+                    </div>
+                    <div class="lesson">
+                        <div class="title">Занятие 9. Юрий Бутусов</div>
+                        <div class="desc"><i>—</i> Становление режиссёра и его путь. Эклектичный, глубокий, тотально интеллектуальный театр Бутусова. Его методы и приёмы работы. Разбор спектакля: «Чайка».</div>
                     </div>
                 </div>
             </div>
@@ -902,23 +361,15 @@
                 </div>
                 <div class="module-body">
                     <div class="lesson">
-                        <div class="title">Занятие 9. Лев Додин</div>
-                        <div class="desc"><i>—</i> Хранитель традиций Станиславского в XXI веке. Становление режиссёра и его путь. МДТ. Его методы и приёмы в работе с артистами. Разбор спектакля: «Бесы».</div>
+                        <div class="title">Занятие 10. Кирилл Серебренников</div>
+                        <div class="desc"><i>—</i> Становление режиссёра. Гоголь-центр. Разбор спектакля: «Господа Головлёвы».</div>
                     </div>
                     <div class="lesson">
-                        <div class="title">Занятие 10. Юрий Бутусов</div>
-                        <div class="desc"><i>—</i> Становление режиссёра и его путь. Эклектичный, глубокий, тотал интеллектуальный театр Бутусова. Его методы и приёмы работы. Разбор спектакля: «Чайка».</div>
+                        <div class="title">Занятие 11. Дмитрий Крымов</div>
+                        <div class="desc"><i>—</i> Становление режиссёра. Приёмы и методы работы. Зачем он переписывает пьесы? Разбор спектакля: «Все тут».</div>
                     </div>
                     <div class="lesson">
-                        <div class="title">Занятие 11. Разбор спектакля «Господа Головлёвы»</div>
-                        <div class="desc"><i>—</i> Глубокий анализ постановки, исследование режиссёрских решений, работа с текстом и актёрами.</div>
-                    </div>
-                    <div class="lesson">
-                        <div class="title">Занятие 12. Художник с большой буквы</div>
-                        <div class="desc"><i>—</i> Разбор спектакля.</div>
-                    </div>
-                    <div class="lesson">
-                        <div class="title">Занятие 13. Римас Туминас</div>
+                        <div class="title">Занятие 12. Римас Туминас</div>
                         <div class="desc"><i>—</i> Становление Римаса Туминаса. Как через визуальную метафору донести глубокую мысль до зрителя? Паузы, художественные приёмы и музыка в спектаклях Туминаса. Разбор спектакля: «Улыбнись нам, Господи».</div>
                     </div>
                 </div>
@@ -932,320 +383,28 @@
                 </div>
                 <div class="module-body">
                     <div class="lesson">
-                        <div class="title">Занятие 14. Кино vs Театр</div>
-                        <div class="desc"><i>—</i> Чем отличается работа режиссёра на площадке и на сцене? Монтаж и свет в кино. Разбор художественных приёмов, которые перекочевали из театра в кино и обратно. Как изменилось кино сегодня? Знакомство с разными режиссёрами (Феллини, Хичкок, Тарантино, Балабанов и т.д.).</div>
+                        <div class="title">Занятие 13. Андрей Тарковский</div>
+                        <div class="desc"><i>—</i> История становления Тарковского. Самые знаменитые фильмы. Как Тарковский работает с пространством, временем и символами. Как из фильма можно создать философское произведение искусства? Разбор фильма: «Сталкер».</div>
                     </div>
                     <div class="lesson">
-                        <div class="title">Занятие 15. Мартин Макдонах</div>
-                        <div class="desc"><i>—</i> Современный драматург и режиссёр. Что важного в диалогах героев Макдонаха? Разбор фильма: «Три билборда на границе Эббинга, Миссури».</div>
+                        <div class="title">Занятие 14. Федерико Феллини</div>
+                        <div class="desc"><i>—</i> Поговорим об одном из самых влиятельных мастеров мирового кинематографа. На основе чего он создавал фильмы? Атмосфера, театральщина и гротеск в фильмах Феллини. Награды и вечная слава. Разбор фильма: «Ночи Кабирии» или «Сладкая жизнь».</div>
                     </div>
                     <div class="lesson">
-                        <div class="title">Занятие 16. Ларс фон Триер</div>
-                        <div class="desc"><i>—</i> Что общего у Брука и Триера? Какие приёмы использует режиссёр, чтобы воздействовать на зрителя? Разбор фильма: «Догвиль».</div>
-                    </div>
-                    <div class="lesson">
-                        <div class="title">Занятие 17. Андрей Тарковский</div>
-                        <div class="desc"><i>—</i> История становления Тарковского. Самые знаменитые фильмы. Как Тарковский работает с пространством, временем и символами. Как из фильма можно создать философское произведение искусства? Разбор фильма: «Зеркало».</div>
-                    </div>
-                    <div class="lesson">
-                        <div class="title">Занятие 18. Итоговое занятие</div>
-                        <div class="desc"><i>—</i> Подводим итоги и отвечаем на вопросы.</div>
+                        <div class="title">Занятие 15. Подведение итогов</div>
+                        <div class="desc"><i>—</i> Подводим итоги курса и отвечаем на вопросы.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- ===== ФОРМАТ ===== -->
-    <section class="section" style="background: #fbf8f4;">
-        <div class="container">
-            <h2>Формат курса</h2>
-            <div class="format-grid">
-                <div class="format-item">
-                    <i class="fas fa-calendar-alt"></i>
-                    <div class="value">9 месяцев</div>
-                    <div class="label">Длительность</div>
-                </div>
-                <div class="format-item">
-                    <i class="fas fa-clock"></i>
-                    <div class="value">2–2,5 ч</div>
-                    <div class="label">Занятие</div>
-                </div>
-                <div class="format-item">
-                    <i class="fas fa-video"></i>
-                    <div class="value">2 раза в месяц</div>
-                    <div class="label">Всего 18 встреч</div>
-                </div>
-                <div class="format-item">
-                    <i class="fas fa-masks-theater"></i>
-                    <div class="value">1–2 выезда</div>
-                    <div class="label">Спектакли (Москва, Питер, др. города)</div>
-                    <div class="note">* не входит в стоимость курса</div>
-                </div>
-            </div>
-            <div style="text-align:center; margin-top: 28px; color:#8a7a6e; font-size:0.85rem;">
-                <i class="fas fa-certificate" style="color:#b8956a; margin-right:8px;"></i> По окончании выдаётся сертификат
-                <span style="margin:0 12px;">|</span>
-                <i class="fas fa-comments" style="color:#b8956a; margin-right:8px;"></i> Чат участников и дополнительная литература
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== СПИКЕРЫ КУРСА ===== -->
-    <section class="section">
-        <div class="container">
-            <h2>Спикеры курса</h2>
-            <div class="speakers-grid">
-                <div class="speaker-card">
-                    <div class="speaker-photo">
-                        <img src="https://i.ibb.co/DPW8gdtD/image.jpg" alt="Максим Перов">
-                    </div>
-                    <h3>Максим Перов</h3>
-                    <div class="role">Актёр, режиссёр, педагог</div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-photo">
-                        <img src="https://i.ibb.co/v42wzyHy/image.jpg" alt="Алина Порутчикова" style="object-position: center 20%; width:100%; height:100%; object-fit:cover;">
-                    </div>
-                    <h3>Алина Порутчикова</h3>
-                    <div class="role">Руководитель литературно-драматургической части, журналист, театровед</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ОТЗЫВЫ ===== -->
-    <section class="section" style="background: #fbf8f4;">
-        <div class="container">
-            <h2>Отзывы участников</h2>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-avatar">
-                        <img src="https://i.ibb.co/bMW53VqK/image.jpg" alt="Варвара Дергачёва">
-                    </div>
-                    <div class="review-content">
-                        <div class="name">Варвара Дергачёва</div>
-                        <div class="text">«Курс был очень познавательный, интересный и нам предстоит еще учиться и учиться. Ни один педагог по литературе не дал мне столько знаний, сколько наши педагоги. Благодарю от всего сердца! Это уникальный проект в нашем городе».</div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-avatar">
-                        <img src="https://i.ibb.co/C5mBjGQj/image.jpg" alt="Татьяна Баширова">
-                    </div>
-                    <div class="review-content">
-                        <div class="name">Татьяна Баширова</div>
-                        <div class="text">«Курс помог мне по-другому смотреть на спектакли, анализировать и здесь, на курсе, у меня появилось чувство вкуса».</div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-avatar">
-                        <img src="https://i.ibb.co/CpHhZytc/image.jpg" alt="Дарья Вешимирская">
-                    </div>
-                    <div class="review-content">
-                        <div class="name">Дарья Вешимирская</div>
-                        <div class="text">«Благодаря инструментам, я научилась понимать механизмы театра, научилась не только отдаваться эмоциям, но и разбирать театр на составляющие, понимать метафоры, подтексты и режиссёрский замысел».</div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-avatar">
-                        <img src="https://i.ibb.co/rBQyvHw/image.jpg" alt="Светлана Солошенко">
-                    </div>
-                    <div class="review-content">
-                        <div class="name">Светлана Солошенко</div>
-                        <div class="text">«Этот проект стал для меня очень важным! Я научилась по-другому воспринимать театр, по-новому считывать спектакли. Я получила инструменты, благодаря которым научилась отходить от эмоций и больше понимать смысл спектаклей».</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ЦИТАТА ===== -->
-    <section class="section" style="border-bottom: none; padding: 40px 0;">
-        <div class="container">
-            <div class="quote-block">
-                <i class="fas fa-quote-left"></i>
-                <p>Театр — это не зеркало, а увеличительное стекло</p>
-                <div class="divider"></div>
-                <span class="author">Мейерхольд</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FAQ ===== -->
-    <section class="section">
-        <div class="container">
-            <h2>Частые вопросы</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Кому подойдёт этот курс?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Всем, кто интересуется театром! Если вы хотите научиться анализировать пьесы и раскладывать любой спектакль на составляющие — тогда вам сюда!
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Нужна ли предварительная подготовка?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Нет, курс построен так, что будет понятен всем! Мы начинаем с основ и постепенно углубляемся в материал.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Как проходят занятия?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Занятия будут проходить в формате лекции и обсуждений. К каждому занятию будет прилагаться дополнительный материал. Также возможны выездные спектакли для живого погружения в театральную среду.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Что я получу по окончании?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Сертификат, глубокое понимание театральных процессов, навыки анализа пьес и спектаклей, а также сообщество единомышленников.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ФОРМА ===== -->
-    <section class="section" id="form" style="border-bottom: none;">
-        <div class="container">
-            <div class="form-section">
-                <h2>Присоединяйтесь к сообществу</h2>
-                <p class="sub">Откройте для себя мир искусства вместе с нами!</p>
-
-                <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Ваше имя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="contact" placeholder="Телефон или Telegram (@username)" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Записаться</button>
-                </form>
-
-                <div id="successMessage">
-                    <i class="fas fa-check-circle" style="margin-right: 10px;"></i>
-                    Спасибо! Я свяжусь с вами в ближайшее время.
-                </div>
-
-                <!-- ===== КОНТАКТЫ ===== -->
-                <div class="contact-block">
-                    <div class="contact-item">
-                        <i class="fab fa-telegram"></i>
-                        <span><a href="https://t.me/aalinchik" target="_blank">Telegram</a></span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <span><a href="tel:+79179211539">+7 917 921-15-39</a></span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-vk"></i>
-                        <span><a href="https://vk.ru/id193178458" target="_blank">VK</a></span>
-                    </div>
-                    <div class="contact-item">
-                        <span><a href="https://max.ru/u/f9LHodD0cOIP3qR7dAi3OF30cfmrPD5kw_5e9xmciw8gPVVWOj2OMOf8Vj0" target="_blank">Max</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ФУТЕР ===== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="socials">
-                <a href="https://t.me/aalinchik" target="_blank" aria-label="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://vk.ru/id193178458" target="_blank" aria-label="VK">
-                    <i class="fab fa-vk"></i>
-                </a>
-                <a href="https://max.ru/u/f9LHodD0cOIP3qR7dAi3OF30cfmrPD5kw_5e9xmciw8gPVVWOj2OMOf8Vj0" target="_blank" aria-label="Макс" class="max-link">
-                    Max
-                </a>
-            </div>
-            <div class="divider"></div>
-            <p>© 2026 Курс «Территория искусства» — театральный анализ. Все права защищены.</p>
-            <p style="margin-top: 4px; color: #aa9a8e; font-size: 0.75rem;">Старт курса 4 октября • 9 месяцев • 18 занятий</p>
-        </div>
-    </footer>
 
     <script>
         // Аккордеон для модулей программы
         document.querySelectorAll('.module-header').forEach(header => {
-            header.addEventListener('click', function(e) {
+            header.addEventListener('click', function() {
                 const module = this.closest('.module');
                 module.classList.toggle('active');
-            });
-        });
-
-        // Аккордеон для FAQ
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', function() {
-                const item = this.closest('.faq-item');
-                item.classList.toggle('active');
-            });
-        });
-
-        // ФОРМА - ОТПРАВКА В ТЕЛЕГРАМ
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value.trim();
-            const contact = document.getElementById('contact').value.trim();
-
-            if (name === '' || contact === '') {
-                alert('Пожалуйста, заполните оба поля.');
-                return;
-            }
-
-            const token = '8947224218:AAHTitFDpuKyUpnFKQ129UIuj3d34nq6H8Y';
-            const chat_id = '435523670';
-            const message = '📩 Новая заявка с сайта!\n\n👤 Имя: ' + name + '\n📱 Контакты: ' + contact;
-
-            fetch('https://api.telegram.org/bot' + token + '/sendMessage', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    chat_id: chat_id,
-                    text: message,
-                    parse_mode: 'HTML'
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.ok) {
-                    document.getElementById('successMessage').style.display = 'block';
-                    document.getElementById('name').value = '';
-                    document.getElementById('contact').value = '';
-                    setTimeout(() => {
-                        document.getElementById('successMessage').style.display = 'none';
-                    }, 6000);
-                } else {
-                    alert('Ошибка отправки. Попробуйте позже.');
-                }
-            })
-            .catch(error => {
-                alert('Ошибка отправки. Попробуйте позже.');
-                console.error('Error:', error);
             });
         });
     </script>
